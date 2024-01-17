@@ -3,7 +3,7 @@ import * as emotionReact from '@emotion/react';
 import * as kusto from '@kusto/monaco-kusto';
 import * as d3 from 'd3';
 import * as i18next from 'i18next';
-import * as jquery from 'jquery';
+import jquery from 'jquery';
 import _ from 'lodash'; // eslint-disable-line lodash/import-scope
 import moment from 'moment'; // eslint-disable-line no-restricted-imports
 import prismjs from 'prismjs';
