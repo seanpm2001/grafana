@@ -29,7 +29,9 @@
     "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
     "paths": {
       "@grafana/schema/dist/esm/*": ["../packages/grafana-schema/src/*"]
-    }
+    },
+
+    "types": ["vite/client"]
   },
   "extends": "@grafana/tsconfig/base.json",
   "include": [
