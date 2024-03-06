@@ -374,7 +374,7 @@
 /.prettierrc.js @grafana/frontend-ops
 /.eslintrc @grafana/frontend-ops
 /.vim @zoltanbedi
-/jest.config.js @grafana/frontend-ops
+/jest.config.cjs @grafana/frontend-ops
 /latest.json @grafana/frontend-ops
 /stylelint.config.js @grafana/frontend-ops
 /tools/ @grafana/frontend-ops
