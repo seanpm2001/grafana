@@ -96,7 +96,7 @@ func readWebAssetsFromFile(manifestpath string) (*dtos.EntryPointAssets, error) 
 }
 
 func readWebAssetsFromCDN(ctx context.Context, baseURL string) (*dtos.EntryPointAssets, error) {
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, baseURL+"public/build/vite/manifest.json", nil)
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, baseURL+"public/build/.vite/manifest.json", nil)
 	if err != nil {
 		return nil, err
 	}
@@ -129,19 +129,19 @@ func readWebAssets(r io.Reader) (*dtos.EntryPointAssets, error) {
 		return nil, fmt.Errorf("failed to read assets-manifest.json %w", err)
 	}
 
-	// TODO: This is a temporary hack to get the entrypoints for the vite frontend loading.
 	var entryPointJSAssets []dtos.EntryPointAsset
 	var darkCSS, lightCSS string
 
 	for _, entry := range manifest {
 		if entry.IsEntry {
-			asset := dtos.EntryPointAsset{
-				FilePath: entry.File,
-				// Not sure what should happen with integrity here
-				Integrity: "",
+			if filepath.Ext(entry.File) != ".css" {
+				asset := dtos.EntryPointAsset{
+					FilePath: entry.File,
+					// Not sure what should happen with integrity here
+					Integrity: "",
+				}
+				entryPointJSAssets = append(entryPointJSAssets, asset)
 			}
-			entryPointJSAssets = append(entryPointJSAssets, asset)
-
 			if entry.Src == "sass/grafana.dark.scss" && entry.IsEntry {
 				darkCSS = entry.File
 			}
@@ -150,8 +150,6 @@ func readWebAssets(r io.Reader) (*dtos.EntryPointAssets, error) {
 			}
 		}
 	}
-
-	// do some error handling shizzle here.
 
 	return &dtos.EntryPointAssets{
 		JSFiles: entryPointJSAssets,
