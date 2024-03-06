@@ -34,7 +34,6 @@ type EntryPointInfo struct {
 var entryPointAssetsCache *dtos.EntryPointAssets = nil
 
 func GetWebAssets(ctx context.Context, cfg *setting.Cfg, license licensing.Licensing) (*dtos.EntryPointAssets, error) {
-
 	if cfg.Env == setting.Dev {
 		// TODO: Hardcoded right now just to get vite dev env working.
 		// see https://vitejs.dev/guide/backend-integration.html
