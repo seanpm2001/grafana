@@ -7868,6 +7868,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-darwin-arm64@npm:1.4.6":
+  version: 1.4.6
+  resolution: "@swc/core-darwin-arm64@npm:1.4.6"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@swc/core-darwin-arm64@npm:1.5.5":
   version: 1.5.5
   resolution: "@swc/core-darwin-arm64@npm:1.5.5"
@@ -7878,6 +7885,13 @@ __metadata:
 "@swc/core-darwin-x64@npm:1.4.2":
   version: 1.4.2
   resolution: "@swc/core-darwin-x64@npm:1.4.2"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-x64@npm:1.4.6":
+  version: 1.4.6
+  resolution: "@swc/core-darwin-x64@npm:1.4.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -7896,6 +7910,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-linux-arm-gnueabihf@npm:1.4.6":
+  version: 1.4.6
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.4.6"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-arm-gnueabihf@npm:1.5.5":
   version: 1.5.5
   resolution: "@swc/core-linux-arm-gnueabihf@npm:1.5.5"
@@ -7906,6 +7927,13 @@ __metadata:
 "@swc/core-linux-arm64-gnu@npm:1.4.2":
   version: 1.4.2
   resolution: "@swc/core-linux-arm64-gnu@npm:1.4.2"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-gnu@npm:1.4.6":
+  version: 1.4.6
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.4.6"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -7924,6 +7952,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-linux-arm64-musl@npm:1.4.6":
+  version: 1.4.6
+  resolution: "@swc/core-linux-arm64-musl@npm:1.4.6"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-arm64-musl@npm:1.5.5":
   version: 1.5.5
   resolution: "@swc/core-linux-arm64-musl@npm:1.5.5"
@@ -7934,6 +7969,13 @@ __metadata:
 "@swc/core-linux-x64-gnu@npm:1.4.2":
   version: 1.4.2
   resolution: "@swc/core-linux-x64-gnu@npm:1.4.2"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-gnu@npm:1.4.6":
+  version: 1.4.6
+  resolution: "@swc/core-linux-x64-gnu@npm:1.4.6"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -7952,6 +7994,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-linux-x64-musl@npm:1.4.6":
+  version: 1.4.6
+  resolution: "@swc/core-linux-x64-musl@npm:1.4.6"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-x64-musl@npm:1.5.5":
   version: 1.5.5
   resolution: "@swc/core-linux-x64-musl@npm:1.5.5"
@@ -7962,6 +8011,13 @@ __metadata:
 "@swc/core-win32-arm64-msvc@npm:1.4.2":
   version: 1.4.2
   resolution: "@swc/core-win32-arm64-msvc@npm:1.4.2"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-arm64-msvc@npm:1.4.6":
+  version: 1.4.6
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.4.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -7980,6 +8036,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-win32-ia32-msvc@npm:1.4.6":
+  version: 1.4.6
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.4.6"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
 "@swc/core-win32-ia32-msvc@npm:1.5.5":
   version: 1.5.5
   resolution: "@swc/core-win32-ia32-msvc@npm:1.5.5"
@@ -7994,6 +8057,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-win32-x64-msvc@npm:1.4.6":
+  version: 1.4.6
+  resolution: "@swc/core-win32-x64-msvc@npm:1.4.6"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@swc/core-win32-x64-msvc@npm:1.5.5":
   version: 1.5.5
   resolution: "@swc/core-win32-x64-msvc@npm:1.5.5"
@@ -8001,7 +8071,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core@npm:1.4.2, @swc/core@npm:^1.3.107":
+"@swc/core@npm:1.4.2":
   version: 1.4.2
   resolution: "@swc/core@npm:1.4.2"
   dependencies:
@@ -8090,6 +8160,52 @@ __metadata:
     "@swc/helpers":
       optional: true
   checksum: 10/31e6dc50eeb549d1e52f21e1c5ae63b714bf4488c70cc4106264de378048ca35c0264c640590fbbb760c0cbe7f2c91291ef20e6af5c46dc31b5da88e8b946f0c
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:^1.3.107":
+  version: 1.4.6
+  resolution: "@swc/core@npm:1.4.6"
+  dependencies:
+    "@swc/core-darwin-arm64": "npm:1.4.6"
+    "@swc/core-darwin-x64": "npm:1.4.6"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.4.6"
+    "@swc/core-linux-arm64-gnu": "npm:1.4.6"
+    "@swc/core-linux-arm64-musl": "npm:1.4.6"
+    "@swc/core-linux-x64-gnu": "npm:1.4.6"
+    "@swc/core-linux-x64-musl": "npm:1.4.6"
+    "@swc/core-win32-arm64-msvc": "npm:1.4.6"
+    "@swc/core-win32-ia32-msvc": "npm:1.4.6"
+    "@swc/core-win32-x64-msvc": "npm:1.4.6"
+    "@swc/counter": "npm:^0.1.2"
+    "@swc/types": "npm:^0.1.5"
+  peerDependencies:
+    "@swc/helpers": ^0.5.0
+  dependenciesMeta:
+    "@swc/core-darwin-arm64":
+      optional: true
+    "@swc/core-darwin-x64":
+      optional: true
+    "@swc/core-linux-arm-gnueabihf":
+      optional: true
+    "@swc/core-linux-arm64-gnu":
+      optional: true
+    "@swc/core-linux-arm64-musl":
+      optional: true
+    "@swc/core-linux-x64-gnu":
+      optional: true
+    "@swc/core-linux-x64-musl":
+      optional: true
+    "@swc/core-win32-arm64-msvc":
+      optional: true
+    "@swc/core-win32-ia32-msvc":
+      optional: true
+    "@swc/core-win32-x64-msvc":
+      optional: true
+  peerDependenciesMeta:
+    "@swc/helpers":
+      optional: true
+  checksum: 10/acf826107e5c72d2cf436fb80b4799b5fd2981e4493bcf573cdcc2c6abd02b29942df8f6b15f6c67a1d39bb709ac9e67194879f0dd7d36bdb41782a3ca612841
   languageName: node
   linkType: hard
 
@@ -10236,17 +10352,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webassemblyjs/ast@npm:1.11.6, @webassemblyjs/ast@npm:^1.11.5":
-  version: 1.11.6
-  resolution: "@webassemblyjs/ast@npm:1.11.6"
-  dependencies:
-    "@webassemblyjs/helper-numbers": "npm:1.11.6"
-    "@webassemblyjs/helper-wasm-bytecode": "npm:1.11.6"
-  checksum: 10/4c1303971ccd5188731c9b01073d9738333f37b946a48c4e049f7b788706cdc66f473cd6f3e791423a94c52a3b2230d070007930d29bccbce238b23835839f3c
-  languageName: node
-  linkType: hard
-
-"@webassemblyjs/ast@npm:1.12.1, @webassemblyjs/ast@npm:^1.12.1":
+"@webassemblyjs/ast@npm:1.12.1, @webassemblyjs/ast@npm:^1.11.5, @webassemblyjs/ast@npm:^1.12.1":
   version: 1.12.1
   resolution: "@webassemblyjs/ast@npm:1.12.1"
   dependencies:
@@ -10267,13 +10373,6 @@ __metadata:
   version: 1.11.6
   resolution: "@webassemblyjs/helper-api-error@npm:1.11.6"
   checksum: 10/e8563df85161096343008f9161adb138a6e8f3c2cc338d6a36011aa55eabb32f2fd138ffe63bc278d009ada001cc41d263dadd1c0be01be6c2ed99076103689f
-  languageName: node
-  linkType: hard
-
-"@webassemblyjs/helper-buffer@npm:1.11.6":
-  version: 1.11.6
-  resolution: "@webassemblyjs/helper-buffer@npm:1.11.6"
-  checksum: 10/b14d0573bf680d22b2522e8a341ec451fddd645d1f9c6bd9012ccb7e587a2973b86ab7b89fe91e1c79939ba96095f503af04369a3b356c8023c13a5893221644
   languageName: node
   linkType: hard
 
@@ -10299,18 +10398,6 @@ __metadata:
   version: 1.11.6
   resolution: "@webassemblyjs/helper-wasm-bytecode@npm:1.11.6"
   checksum: 10/4ebf03e9c1941288c10e94e0f813f413f972bfaa1f09be2cc2e5577f300430906b61aa24d52f5ef2f894e8e24e61c6f7c39871d7e3d98bc69460e1b8e00bb20b
-  languageName: node
-  linkType: hard
-
-"@webassemblyjs/helper-wasm-section@npm:1.11.6":
-  version: 1.11.6
-  resolution: "@webassemblyjs/helper-wasm-section@npm:1.11.6"
-  dependencies:
-    "@webassemblyjs/ast": "npm:1.11.6"
-    "@webassemblyjs/helper-buffer": "npm:1.11.6"
-    "@webassemblyjs/helper-wasm-bytecode": "npm:1.11.6"
-    "@webassemblyjs/wasm-gen": "npm:1.11.6"
-  checksum: 10/38a615ab3d55f953daaf78b69f145e2cc1ff5288ab71715d1a164408b735c643a87acd7e7ba3e9633c5dd965439a45bb580266b05a06b22ff678d6c013514108
   languageName: node
   linkType: hard
 
@@ -10351,23 +10438,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webassemblyjs/wasm-edit@npm:^1.11.5":
-  version: 1.11.6
-  resolution: "@webassemblyjs/wasm-edit@npm:1.11.6"
-  dependencies:
-    "@webassemblyjs/ast": "npm:1.11.6"
-    "@webassemblyjs/helper-buffer": "npm:1.11.6"
-    "@webassemblyjs/helper-wasm-bytecode": "npm:1.11.6"
-    "@webassemblyjs/helper-wasm-section": "npm:1.11.6"
-    "@webassemblyjs/wasm-gen": "npm:1.11.6"
-    "@webassemblyjs/wasm-opt": "npm:1.11.6"
-    "@webassemblyjs/wasm-parser": "npm:1.11.6"
-    "@webassemblyjs/wast-printer": "npm:1.11.6"
-  checksum: 10/c168bfc6d0cdd371345f36f95a4766d098a96ccc1257e6a6e3a74d987a5c4f2ddd2244a6aecfa5d032a47d74ed2c3b579e00a314d31e4a0b76ad35b31cdfa162
-  languageName: node
-  linkType: hard
-
-"@webassemblyjs/wasm-edit@npm:^1.12.1":
+"@webassemblyjs/wasm-edit@npm:^1.11.5, @webassemblyjs/wasm-edit@npm:^1.12.1":
   version: 1.12.1
   resolution: "@webassemblyjs/wasm-edit@npm:1.12.1"
   dependencies:
@@ -10380,19 +10451,6 @@ __metadata:
     "@webassemblyjs/wasm-parser": "npm:1.12.1"
     "@webassemblyjs/wast-printer": "npm:1.12.1"
   checksum: 10/5678ae02dbebba2f3a344e25928ea5a26a0df777166c9be77a467bfde7aca7f4b57ef95587e4bd768a402cdf2fddc4c56f0a599d164cdd9fe313520e39e18137
-  languageName: node
-  linkType: hard
-
-"@webassemblyjs/wasm-gen@npm:1.11.6":
-  version: 1.11.6
-  resolution: "@webassemblyjs/wasm-gen@npm:1.11.6"
-  dependencies:
-    "@webassemblyjs/ast": "npm:1.11.6"
-    "@webassemblyjs/helper-wasm-bytecode": "npm:1.11.6"
-    "@webassemblyjs/ieee754": "npm:1.11.6"
-    "@webassemblyjs/leb128": "npm:1.11.6"
-    "@webassemblyjs/utf8": "npm:1.11.6"
-  checksum: 10/f91903506ce50763592863df5d80ffee80f71a1994a882a64cdb83b5e44002c715f1ef1727d8ccb0692d066af34d3d4f5e59e8f7a4e2eeb2b7c32692ac44e363
   languageName: node
   linkType: hard
 
@@ -10409,18 +10467,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webassemblyjs/wasm-opt@npm:1.11.6":
-  version: 1.11.6
-  resolution: "@webassemblyjs/wasm-opt@npm:1.11.6"
-  dependencies:
-    "@webassemblyjs/ast": "npm:1.11.6"
-    "@webassemblyjs/helper-buffer": "npm:1.11.6"
-    "@webassemblyjs/wasm-gen": "npm:1.11.6"
-    "@webassemblyjs/wasm-parser": "npm:1.11.6"
-  checksum: 10/e0cfeea381ecbbd0ca1616e9a08974acfe7fc81f8a16f9f2d39f565dc51784dd7043710b6e972f9968692d273e32486b9a8a82ca178d4bd520b2d5e2cf28234d
-  languageName: node
-  linkType: hard
-
 "@webassemblyjs/wasm-opt@npm:1.12.1":
   version: 1.12.1
   resolution: "@webassemblyjs/wasm-opt@npm:1.12.1"
@@ -10433,21 +10479,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webassemblyjs/wasm-parser@npm:1.11.6, @webassemblyjs/wasm-parser@npm:^1.11.5":
-  version: 1.11.6
-  resolution: "@webassemblyjs/wasm-parser@npm:1.11.6"
-  dependencies:
-    "@webassemblyjs/ast": "npm:1.11.6"
-    "@webassemblyjs/helper-api-error": "npm:1.11.6"
-    "@webassemblyjs/helper-wasm-bytecode": "npm:1.11.6"
-    "@webassemblyjs/ieee754": "npm:1.11.6"
-    "@webassemblyjs/leb128": "npm:1.11.6"
-    "@webassemblyjs/utf8": "npm:1.11.6"
-  checksum: 10/6995e0b7b8ebc52b381459c6a555f87763dcd3975c4a112407682551e1c73308db7af23385972a253dceb5af94e76f9c97cb861e8239b5ed1c3e79b95d8e2097
-  languageName: node
-  linkType: hard
-
-"@webassemblyjs/wasm-parser@npm:1.12.1, @webassemblyjs/wasm-parser@npm:^1.12.1":
+"@webassemblyjs/wasm-parser@npm:1.12.1, @webassemblyjs/wasm-parser@npm:^1.11.5, @webassemblyjs/wasm-parser@npm:^1.12.1":
   version: 1.12.1
   resolution: "@webassemblyjs/wasm-parser@npm:1.12.1"
   dependencies:
@@ -10458,16 +10490,6 @@ __metadata:
     "@webassemblyjs/leb128": "npm:1.11.6"
     "@webassemblyjs/utf8": "npm:1.11.6"
   checksum: 10/f7311685b76c3e1def2abea3488be1e77f06ecd8633143a6c5c943ca289660952b73785231bb76a010055ca64645227a4bc79705c26ab7536216891b6bb36320
-  languageName: node
-  linkType: hard
-
-"@webassemblyjs/wast-printer@npm:1.11.6":
-  version: 1.11.6
-  resolution: "@webassemblyjs/wast-printer@npm:1.11.6"
-  dependencies:
-    "@webassemblyjs/ast": "npm:1.11.6"
-    "@xtuc/long": "npm:4.2.2"
-  checksum: 10/fd45fd0d693141d678cc2f6ff2d3a0d7a8884acb1c92fb0c63cf43b7978e9560be04118b12792638a39dd185640453510229e736f3049037d0c361f6435f2d5f
   languageName: node
   linkType: hard
 
@@ -12245,14 +12267,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001587":
-  version: 1.0.30001591
-  resolution: "caniuse-lite@npm:1.0.30001591"
-  checksum: 10/3891fad30a99b984a3a20570c0440d35dda933c79ea190cdb78a1f1743866506a4b41b4389b53a7c0351f2228125f9dc49308463f57e61503e5689b444add1a8
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001599":
+"caniuse-lite@npm:^1.0.30001587, caniuse-lite@npm:^1.0.30001599":
   version: 1.0.30001599
   resolution: "caniuse-lite@npm:1.0.30001599"
   checksum: 10/c9a5ad806fc0d446e4f995d551b840d8fdcbe97958b7f83ff7a255a8ef5e40ca12ca1a508c66b3ab147e19eef932d28772d205c046500dd0740ea9dfb602e2e1
@@ -14946,17 +14961,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.15.0":
-  version: 5.15.0
-  resolution: "enhanced-resolve@npm:5.15.0"
-  dependencies:
-    graceful-fs: "npm:^4.2.4"
-    tapable: "npm:^2.2.0"
-  checksum: 10/180c3f2706f9117bf4dc7982e1df811dad83a8db075723f299245ef4488e0cad7e96859c5f0e410682d28a4ecd4da021ec7d06265f7e4eb6eed30c69ca5f7d3e
-  languageName: node
-  linkType: hard
-
-"enhanced-resolve@npm:^5.16.0":
+"enhanced-resolve@npm:^5.15.0, enhanced-resolve@npm:^5.16.0":
   version: 5.16.0
   resolution: "enhanced-resolve@npm:5.16.0"
   dependencies:
@@ -16895,7 +16900,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:2.3.2, fsevents@npm:^2.3.2, fsevents@npm:~2.3.2":
+"fsevents@npm:2.3.2":
   version: 2.3.2
   resolution: "fsevents@npm:2.3.2"
   dependencies:
@@ -16905,7 +16910,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:~2.3.3":
+"fsevents@npm:^2.3.2, fsevents@npm:~2.3.2, fsevents@npm:~2.3.3":
   version: 2.3.3
   resolution: "fsevents@npm:2.3.3"
   dependencies:
@@ -16915,7 +16920,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>, fsevents@patch:fsevents@npm%3A^2.3.2#optional!builtin<compat/fsevents>, fsevents@patch:fsevents@npm%3A~2.3.2#optional!builtin<compat/fsevents>":
+"fsevents@patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
   dependencies:
@@ -16924,7 +16929,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@npm%3A~2.3.3#optional!builtin<compat/fsevents>":
+"fsevents@patch:fsevents@npm%3A^2.3.2#optional!builtin<compat/fsevents>, fsevents@patch:fsevents@npm%3A~2.3.2#optional!builtin<compat/fsevents>, fsevents@patch:fsevents@npm%3A~2.3.3#optional!builtin<compat/fsevents>":
   version: 2.3.3
   resolution: "fsevents@patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
   dependencies:
@@ -28792,21 +28797,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:^5.15.1":
-  version: 5.27.0
-  resolution: "terser@npm:5.27.0"
-  dependencies:
-    "@jridgewell/source-map": "npm:^0.3.3"
-    acorn: "npm:^8.8.2"
-    commander: "npm:^2.20.0"
-    source-map-support: "npm:~0.5.20"
-  bin:
-    terser: bin/terser
-  checksum: 10/9b2c5cb00747dea5994034ca064fb3cc7efc1be6b79a35247662d51ab43bdbe9cbf002bbf29170b5f3bd068c811d0212e22d94acd2cf0d8562687b96f1bffc9f
-  languageName: node
-  linkType: hard
-
-"terser@npm:^5.17.4, terser@npm:^5.26.0, terser@npm:^5.7.2":
+"terser@npm:^5.15.1, terser@npm:^5.17.4, terser@npm:^5.26.0, terser@npm:^5.7.2":
   version: 5.29.2
   resolution: "terser@npm:5.29.2"
   dependencies:
