@@ -41,7 +41,7 @@ export function configureStore(initialState?: Partial<StoreState>) {
         queryLibraryApi.middleware,
         ...extraMiddleware
       ),
-    devTools: process.env.NODE_ENV !== 'production',
+    devTools: import.meta.env.MODE !== 'production',
     preloadedState: {
       navIndex: buildInitialState(),
       ...initialState,
