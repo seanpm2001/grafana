@@ -2,12 +2,9 @@ package lerna
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"os"
 	"os/exec"
-	"path/filepath"
-	"strings"
 
 	"github.com/grafana/grafana/pkg/build/config"
 	"github.com/grafana/grafana/pkg/build/fsutil"
@@ -38,25 +35,6 @@ func bumpLernaVersion(version string, grafanaDir string) error {
 	}
 
 	return nil
-}
-
-func GetLernaVersion(grafanaDir string) (string, error) {
-	lernaJSONPath := filepath.Join(grafanaDir, "lerna.json")
-	//nolint:gosec
-	lernaJSONB, err := os.ReadFile(lernaJSONPath)
-	if err != nil {
-		return "", fmt.Errorf("failed to read %q: %w", lernaJSONPath, err)
-	}
-	pkgObj := map[string]any{}
-	if err := json.Unmarshal(lernaJSONB, &pkgObj); err != nil {
-		return "", fmt.Errorf("failed decoding %q: %w", lernaJSONPath, err)
-	}
-
-	version := pkgObj["version"].(string)
-	if version == "" {
-		return "", fmt.Errorf("failed to read version from %q", lernaJSONPath)
-	}
-	return strings.TrimSpace(version), nil
 }
 
 func PackFrontendPackages(ctx context.Context, tag, grafanaDir, artifactsDir string) error {
