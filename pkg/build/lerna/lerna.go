@@ -31,7 +31,7 @@ func BuildFrontendPackages(version string, mode config.Edition, grafanaDir strin
 
 func bumpLernaVersion(version string, grafanaDir string) error {
 	//nolint:gosec
-	cmd := exec.Command("yarn", "run", "lerna", "version", version, "--exact", "--no-git-tag-version", "--no-push", "--force-publish", "-y")
+	cmd := exec.Command("yarn", "nx", "release", "version", version, "--no-git-commit", "--no-git-tag", "--no-stage-changes", "--group", "fixed")
 	cmd.Dir = grafanaDir
 	if output, err := cmd.CombinedOutput(); err != nil {
 		return fmt.Errorf("failed to bump version for frontend packages: %s\n%s", err, output)
