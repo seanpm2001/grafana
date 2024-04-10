@@ -5,10 +5,10 @@
   "version": "11.0.0",
   "dependencies": {
     "@emotion/css": "11.11.2",
-    "@grafana/data": "11.0.0",
-    "@grafana/runtime": "11.0.0",
-    "@grafana/schema": "11.0.0",
-    "@grafana/ui": "11.0.0",
+    "@grafana/data": "workspace:*",
+    "@grafana/runtime": "workspace:*",
+    "@grafana/schema": "workspace:*",
+    "@grafana/ui": "workspace:*",
     "lodash": "4.17.21",
     "monaco-editor": "0.34.1",
     "react": "18.2.0",
@@ -18,7 +18,7 @@
     "tslib": "2.6.3"
   },
   "devDependencies": {
-    "@grafana/plugin-configs": "11.0.0",
+    "@grafana/plugin-configs": "workspace:*",
     "@testing-library/dom": "10.0.0",
     "@testing-library/react": "15.0.2",
     "@testing-library/user-event": "14.5.2",
