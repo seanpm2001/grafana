@@ -9,5 +9,5 @@
   },
   "exclude": ["dist/**/*"],
   "extends": "@grafana/tsconfig",
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts*"]
 }
