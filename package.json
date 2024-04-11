@@ -76,7 +76,7 @@
     "@cypress/webpack-preprocessor": "6.0.1",
     "@emotion/eslint-plugin": "11.11.0",
     "@grafana/eslint-config": "7.0.0",
-    "@grafana/eslint-plugin": "link:./packages/grafana-eslint-rules",
+    "@grafana/eslint-plugin": "workspace:*",
     "@grafana/plugin-e2e": "1.3.2",
     "@grafana/tsconfig": "^1.3.0-rc1",
     "@manypkg/get-packages": "^2.2.0",
