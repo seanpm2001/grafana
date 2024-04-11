@@ -2,9 +2,12 @@ package lerna
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"os/exec"
+	"path/filepath"
+	"strings"
 
 	"github.com/grafana/grafana/pkg/build/config"
 	"github.com/grafana/grafana/pkg/build/fsutil"
@@ -28,7 +31,7 @@ func BuildFrontendPackages(version string, mode config.Edition, grafanaDir strin
 
 func bumpLernaVersion(version string, grafanaDir string) error {
 	//nolint:gosec
-	cmd := exec.Command("yarn", "nx", "release", "version", version, "--no-git-commit", "--no-git-tag", "--no-stage-changes", "--group", "fixed")
+	cmd := exec.Command("yarn", "nx", "release", "version", version, "--group", "grafanaPackages")
 	cmd.Dir = grafanaDir
 	if output, err := cmd.CombinedOutput(); err != nil {
 		return fmt.Errorf("failed to bump version for frontend packages: %s\n%s", err, output)
@@ -53,12 +56,41 @@ func PackFrontendPackages(ctx context.Context, tag, grafanaDir, artifactsDir str
 		return err
 	}
 
+	nxJSONPath := filepath.Join(grafanaDir, "nx.json")
+	nxJson, err := os.ReadFile(nxJSONPath)
+	if err != nil {
+		return fmt.Errorf("failed to read nx.json: %w", err)
+	}
+
+	var nxConf NxConf
+
+	if err := json.Unmarshal(nxJson, &nxConf); err != nil {
+		return fmt.Errorf("failed to unmarshall nx.json: %w", err)
+	}
+
+	packagesToPack := nxConf.Release.Groups.GrafanaPackages.Projects
+	grafanaPackages := strings.Join(packagesToPack, ",")
+
 	// nolint:gosec
-	cmd := exec.CommandContext(ctx, "yarn", "workspaces", "foreach", "--no-private", "--include='@grafana/*'", "-A", "exec", "yarn", "pack", "--out", fmt.Sprintf("../../npm-artifacts/%%s-%v.tgz", tag))
+	cmd := exec.CommandContext(ctx, "yarn", "nx", "exec", fmt.Sprintf(`--projects="%s"`, grafanaPackages), "--", "yarn", "pack", "--out", fmt.Sprintf("%s/%%s-%v.tgz", artifactsDir, tag))
 	cmd.Dir = grafanaDir
 	if output, err := cmd.CombinedOutput(); err != nil {
 		return fmt.Errorf("command '%s' failed to run, output: %s, err: %q", cmd.String(), output, err)
 	}
 
 	return nil
+}
+
+type NxConf struct {
+	Release Release `json:"release"`
+}
+type GrafanaPackages struct {
+	Projects []string `json:"projects"`
+}
+type Groups struct {
+	GrafanaPackages GrafanaPackages `json:"grafanaPackages"`
+}
+type Release struct {
+	ProjectsRelationship string `json:"projectsRelationship"`
+	Groups               Groups `json:"groups"`
 }
