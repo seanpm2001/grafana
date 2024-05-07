@@ -36,7 +36,7 @@ type Service struct {
 	usageStats         usagestats.Service
 	validator          validator.Service
 	statsService       stats.Service
-	features           *featuremgmt.FeatureManager
+	features           featuremgmt.FeatureToggles
 	datasources        datasources.DataSourceService
 	httpClientProvider httpclient.Provider
 
@@ -55,7 +55,7 @@ func ProvideService(
 	store db.DB,
 	social social.Service,
 	plugins pluginstore.Store,
-	features *featuremgmt.FeatureManager,
+	features featuremgmt.FeatureToggles,
 	datasourceService datasources.DataSourceService,
 	httpClientProvider httpclient.Provider,
 ) *Service {

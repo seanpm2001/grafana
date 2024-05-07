@@ -21,6 +21,10 @@ type FeatureToggles interface {
 	// Get the enabled flags -- this *may* also include disabled flags (with value false)
 	// but it is guaranteed to have the enabled ones listed
 	GetEnabled(ctx context.Context) map[string]bool
+
+	// GetUsageStats returns a map of enabled features where the key is the
+	// feature name and the value is 1
+	GetUsageStats(ctx context.Context) map[string]any
 }
 
 // FeatureFlagStage indicates the quality level

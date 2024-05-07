@@ -159,6 +159,10 @@ func (f fakeFeatureToggles) GetEnabled(ctx context.Context) map[string]bool {
 	return map[string]bool{}
 }
 
+func (f fakeFeatureToggles) GetUsageStats(ctx context.Context) map[string]any {
+	return map[string]any{}
+}
+
 // Fake grpc secrets plugin impl
 type fakeGRPCSecretsPlugin struct {
 	kv map[Key]string
