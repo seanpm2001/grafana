@@ -48,4 +48,8 @@ func addUserAuthTokenMigrations(mg *Migrator) {
 	mg.AddMigration("add index user_auth_token.revoked_at", NewAddIndexMigration(userAuthTokenV1, &Index{
 		Cols: []string{"revoked_at"},
 	}))
+
+	mg.AddMigration("add index for user_auth_token.auth_token and user_auth_token.prev_auth_token", NewAddIndexMigration(userAuthTokenV1, &Index{
+		Cols: []string{"auth_token", "prev_auth_token"},
+	}))
 }
