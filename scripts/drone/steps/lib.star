@@ -976,7 +976,7 @@ def integration_tests_steps(name, cmds, hostname = None, port = None, environmen
             "apk add --update build-base",
         ] + cmds,
     }
-    
+
     if canFail:
         step["failure"] = "ignore"
 
