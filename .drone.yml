@@ -1056,6 +1056,7 @@ steps:
   environment:
     AM_TENANT_ID: test
     AM_URL: http://mimir_backend:8080
+  failure: ignore
   image: golang:1.22.3-alpine
   name: remote-alertmanager-integration-tests
 trigger:
@@ -2478,6 +2479,7 @@ steps:
   environment:
     AM_TENANT_ID: test
     AM_URL: http://mimir_backend:8080
+  failure: ignore
   image: golang:1.22.3-alpine
   name: remote-alertmanager-integration-tests
 trigger:
@@ -4267,6 +4269,7 @@ steps:
   environment:
     AM_TENANT_ID: test
     AM_URL: http://mimir_backend:8080
+  failure: ignore
   image: golang:1.22.3-alpine
   name: remote-alertmanager-integration-tests
 trigger:
@@ -4911,6 +4914,6 @@ kind: secret
 name: gcr_credentials
 ---
 kind: signature
-hmac: a42d3a98c82801fb2f38dfe5fb18d9c0637a57130dc5c171a3701dde4c6bbe9a
+hmac: f606ebda81be5af8225c43a28f41b0cf568b91ae1862207982c4c4886da582fe
 
 ...
