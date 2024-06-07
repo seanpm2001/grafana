@@ -3044,7 +3044,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@grafana/e2e-selectors@npm:11.0.0, @grafana/e2e-selectors@npm:^11.0.0, @grafana/e2e-selectors@workspace:*, @grafana/e2e-selectors@workspace:packages/grafana-e2e-selectors":
+"@grafana/e2e-selectors@npm:11.0.0, @grafana/e2e-selectors@workspace:*, @grafana/e2e-selectors@workspace:packages/grafana-e2e-selectors":
   version: 0.0.0-use.local
   resolution: "@grafana/e2e-selectors@workspace:packages/grafana-e2e-selectors"
   dependencies:
@@ -3506,26 +3506,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@grafana/scenes@npm:4.27.0":
-  version: 4.27.0
-  resolution: "@grafana/scenes@npm:4.27.0"
-  dependencies:
-    "@grafana/e2e-selectors": "npm:^11.0.0"
-    "@leeoniya/ufuzzy": "npm:^1.0.14"
-    react-grid-layout: "npm:1.3.4"
-    react-use: "npm:17.4.0"
-    react-virtualized-auto-sizer: "npm:1.0.7"
-    uuid: "npm:^9.0.0"
-  peerDependencies:
-    "@grafana/data": ^10.4.1
-    "@grafana/runtime": ^10.4.1
-    "@grafana/schema": ^10.4.1
-    "@grafana/ui": ^10.4.1
-    react: ^18.0.0
-    react-dom: ^18.0.0
-  checksum: 10/db072541da50cece2ccc2cd8965daa0ac83a77ab423aa576b9bfd08bb227727d5187bf4e27b0f8578d6fd1ba8fe38e2dafc73c0e74b627ff926915cf744830a2
+"@grafana/scenes@link:/home/axelav/projects/scenes/packages/scenes::locator=grafana%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@grafana/scenes@link:/home/axelav/projects/scenes/packages/scenes::locator=grafana%40workspace%3A."
   languageName: node
-  linkType: hard
+  linkType: soft
 
 "@grafana/schema@npm:11.0.0, @grafana/schema@workspace:*, @grafana/schema@workspace:packages/grafana-schema":
   version: 0.0.0-use.local
@@ -4251,7 +4236,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@leeoniya/ufuzzy@npm:1.0.14, @leeoniya/ufuzzy@npm:^1.0.14":
+"@leeoniya/ufuzzy@npm:1.0.14":
   version: 1.0.14
   resolution: "@leeoniya/ufuzzy@npm:1.0.14"
   checksum: 10/852b580a8eaaf92e2d448f5b720e3c53e4bea22187bf5e8459256677c47183321b47b8384982e15751f42da7e77a216fd86c80e6185677d8270adeab4a4fb771
@@ -16973,7 +16958,7 @@ __metadata:
     "@grafana/prometheus": "workspace:*"
     "@grafana/runtime": "workspace:*"
     "@grafana/saga-icons": "workspace:*"
-    "@grafana/scenes": "npm:4.27.0"
+    "@grafana/scenes": "link:/home/axelav/projects/scenes/packages/scenes"
     "@grafana/schema": "workspace:*"
     "@grafana/sql": "workspace:*"
     "@grafana/tsconfig": "npm:^1.3.0-rc1"
@@ -22109,7 +22094,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nano-css@npm:^5.3.1, nano-css@npm:^5.6.1":
+"nano-css@npm:^5.6.1":
   version: 5.6.1
   resolution: "nano-css@npm:5.6.1"
   dependencies:
@@ -25744,31 +25729,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-use@npm:17.4.0":
-  version: 17.4.0
-  resolution: "react-use@npm:17.4.0"
-  dependencies:
-    "@types/js-cookie": "npm:^2.2.6"
-    "@xobotyi/scrollbar-width": "npm:^1.9.5"
-    copy-to-clipboard: "npm:^3.3.1"
-    fast-deep-equal: "npm:^3.1.3"
-    fast-shallow-equal: "npm:^1.0.0"
-    js-cookie: "npm:^2.2.1"
-    nano-css: "npm:^5.3.1"
-    react-universal-interface: "npm:^0.6.2"
-    resize-observer-polyfill: "npm:^1.5.1"
-    screenfull: "npm:^5.1.0"
-    set-harmonic-interval: "npm:^1.0.1"
-    throttle-debounce: "npm:^3.0.1"
-    ts-easing: "npm:^0.2.0"
-    tslib: "npm:^2.1.0"
-  peerDependencies:
-    react: ^16.8.0  || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
-  checksum: 10/98566c4817b00251107824743ea9dff41f167b548bd5f249f6eb9e2ec09388a2de1e89988e4432cead3f8aa83cf706e0255db8a20c0615768c670751973d2761
-  languageName: node
-  linkType: hard
-
 "react-use@npm:17.5.0, react-use@npm:^17.4.2":
   version: 17.5.0
   resolution: "react-use@npm:17.5.0"
@@ -25812,16 +25772,6 @@ __metadata:
     react: ^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0
     react-dom: ^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0
   checksum: 10/02101a340bdbe3e40c49dbc52e524eb7ca18832690e91f045a25675600d7adc0a63e800a4ace6a014132adcdcce0e12a8137971de408427a5a3112d7c87c9f3e
-  languageName: node
-  linkType: hard
-
-"react-virtualized-auto-sizer@npm:1.0.7":
-  version: 1.0.7
-  resolution: "react-virtualized-auto-sizer@npm:1.0.7"
-  peerDependencies:
-    react: ^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0-rc
-    react-dom: ^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0-rc
-  checksum: 10/a16d8ac11a0efa20d44f36a5cf3854027895b806363a409f2ddc07ff92bfc92aaf5b8eee21f3e1b153cee2273db5e5383b6334d4b530d934ed08808ecfb45b9f
   languageName: node
   linkType: hard
 
