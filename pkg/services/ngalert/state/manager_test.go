@@ -1541,7 +1541,7 @@ func printAllAnnotations(annos map[int64]annotations.Item) string {
 }
 
 func TestStaleResultsHandler(t *testing.T) {
-	evaluationTime := time.Now()
+	evaluationTime := time.Now().Truncate(time.Second).UTC() // Truncate to the second since we don't store sub-second precision.
 	interval := time.Minute
 
 	ctx := context.Background()
@@ -1551,9 +1551,19 @@ func TestStaleResultsHandler(t *testing.T) {
 	rule := tests.CreateTestAlertRule(t, ctx, dbstore, int64(interval.Seconds()), mainOrgID)
 	lastEval := evaluationTime.Add(-2 * interval)
 
-	labels1 := models.InstanceLabels{"test1": "testValue1"}
+	labels1 := models.InstanceLabels{
+		"__alert_rule_namespace_uid__": "namespace",
+		"__alert_rule_uid__":           rule.UID,
+		"alertname":                    rule.Title,
+		"test1":                        "testValue1",
+	}
 	_, hash1, _ := labels1.StringAndHash()
-	labels2 := models.InstanceLabels{"test2": "testValue2"}
+	labels2 := models.InstanceLabels{
+		"__alert_rule_namespace_uid__": "namespace",
+		"__alert_rule_uid__":           rule.UID,
+		"alertname":                    rule.Title,
+		"test2":                        "testValue2",
+	}
 	_, hash2, _ := labels2.StringAndHash()
 	instances := []models.AlertInstance{
 		{
@@ -1567,6 +1577,7 @@ func TestStaleResultsHandler(t *testing.T) {
 			LastEvalTime:      lastEval,
 			CurrentStateSince: lastEval,
 			CurrentStateEnd:   lastEval.Add(3 * interval),
+			ResultFingerprint: data.Labels{"test1": "testValue1"}.Fingerprint().String(),
 		},
 		{
 			AlertInstanceKey: models.AlertInstanceKey{
@@ -1579,6 +1590,7 @@ func TestStaleResultsHandler(t *testing.T) {
 			LastEvalTime:      lastEval,
 			CurrentStateSince: lastEval,
 			CurrentStateEnd:   lastEval.Add(3 * interval),
+			ResultFingerprint: data.Labels{"test2": "testValue2"}.Fingerprint().String(),
 		},
 	}
 
@@ -1608,22 +1620,17 @@ func TestStaleResultsHandler(t *testing.T) {
 				{
 					AlertRuleUID: rule.UID,
 					OrgID:        1,
-					Labels: data.Labels{
-						"__alert_rule_namespace_uid__": "namespace",
-						"__alert_rule_uid__":           rule.UID,
-						"alertname":                    rule.Title,
-						"test1":                        "testValue1",
-					},
-					Values: make(map[string]float64),
-					State:  eval.Normal,
+					Labels:       data.Labels(labels1),
+					Values:       make(map[string]float64),
+					State:        eval.Normal,
 					LatestResult: &state.Evaluation{
 						EvaluationTime:  evaluationTime,
 						EvaluationState: eval.Normal,
 						Values:          make(map[string]*float64),
 						Condition:       "A",
 					},
-					StartsAt:           evaluationTime,
-					EndsAt:             evaluationTime,
+					StartsAt:           lastEval,
+					EndsAt:             lastEval.Add(3 * interval),
 					LastEvaluationTime: evaluationTime,
 					EvaluationDuration: 0,
 					Annotations:        map[string]string{"testAnnoKey": "testAnnoValue"},
