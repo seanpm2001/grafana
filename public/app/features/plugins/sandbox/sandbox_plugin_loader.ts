@@ -162,7 +162,7 @@ async function doImportPluginModuleInSandbox(meta: SandboxPluginMeta): Promise<S
           }
 
           try {
-            const resolvedDeps = resolvePluginDependencies(dependencies, meta.id);
+            const resolvedDeps = await resolvePluginDependencies(dependencies, meta.id);
             // execute the plugin's code
             const pluginExportsRaw = factory.apply(null, resolvedDeps);
             // only after the plugin has been executed
@@ -213,11 +213,15 @@ async function doImportPluginModuleInSandbox(meta: SandboxPluginMeta): Promise<S
   });
 }
 
-function resolvePluginDependencies(deps: string[], pluginId: string) {
+async function resolvePluginDependencies(deps: string[], pluginId: string) {
   // resolve dependencies
   const resolvedDeps: CompartmentDependencyModule[] = [];
   for (const dep of deps) {
     let resolvedDep = sandboxPluginDependencies.get(dep);
+
+    if (typeof resolvedDep === 'function') {
+      resolvedDep = await resolvedDep();
+    }
     if (resolvedDep?.__useDefault) {
       resolvedDep = resolvedDep.default;
     }
