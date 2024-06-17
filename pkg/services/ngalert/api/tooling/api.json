@@ -4664,6 +4664,7 @@
    "type": "object"
   },
   "gettableAlerts": {
+   "description": "GettableAlerts gettable alerts",
    "items": {
     "$ref": "#/definitions/gettableAlert",
     "type": "object"
@@ -4730,31 +4731,6 @@
     "status",
     "updatedAt"
    ],
-   "type": "object"
-  },
-  "gettableGrafanaSilences": {
-   "items": {
-    "$ref": "#/definitions/gettableGrafanaSilence"
-   },
-   "type": "array"
-  },
-  "gettableGrafanaSilence": {
-   "properties": {
-    "accessControl": {
-     "additionalProperties": {
-      "type": "boolean"
-     },
-     "example": {
-      "create": false,
-      "read": true,
-      "write": false
-     },
-     "type": "object"
-    },
-    "metadata": {
-     "$ref": "#/definitions/SilenceMetadata"
-    }
-   },
    "type": "object"
   },
   "gettableGrafanaSilences": {
@@ -6345,7 +6321,7 @@
    "description": "",
    "schema": {
     "items": {
-     "$ref": "#/definitions/receiver"
+     "$ref": "#/definitions/Receiver"
     },
     "type": "array"
    }
